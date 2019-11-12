@@ -11,15 +11,12 @@ def language(request):
     language = request.config.getoption("language")
     if language == "ru":
         print("\nrussian language for test..")
-        language = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207"
         return language
     elif language == "fr":
         print("\nfrance language for test..")
-        language = "http://selenium1py.pythonanywhere.com/fr/catalogue/coders-at-work_207"
         return language
     elif language == "es":
         print("\nspanish language for test..")
-        language = "http://selenium1py.pythonanywhere.com/es/catalogue/coders-at-work_207"
         return language
     else:
         raise pytest.UsageError("--language should be ru, fr, es")
